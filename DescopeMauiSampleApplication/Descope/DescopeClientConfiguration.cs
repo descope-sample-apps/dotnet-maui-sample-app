@@ -15,8 +15,5 @@ namespace DescopeMauiSampleApplication.Descope
         public string DescopeIssuer { get; set; }
 
         public IBrowser Browser { get; set; }
-
-        //public string Flow { get; set; }
-
     }
 }
