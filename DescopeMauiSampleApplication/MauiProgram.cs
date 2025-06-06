@@ -26,7 +26,7 @@ public static class MauiProgram
         var descopeClientConfiguration = new Descope.DescopeClientConfiguration()
         {
             DescopeIssuer = "https://api.descope.com/oauth2/v1",
-            ProjectId = "P2y0ZxPeRELhp6pJWC40Rgqk3Mtd",
+            ProjectId = "<YOUR_PROJECT_ID>", // TODO: Replace with your own Descope project ID
             RedirectUri = "myapp://callback",
             Browser = new WebBrowserAuthenticator(),
         };
