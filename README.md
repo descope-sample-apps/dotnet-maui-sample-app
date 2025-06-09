@@ -20,6 +20,26 @@ Look at the [Duende.IdentityModel.OidcClient](https://docs.duendesoftware.com/id
 - **User Dashboard**: After logging in, users are redirected to a dashboard which displays their session information.
 - **Responsive UI** – Login screen vs. authenticated dashboard swap.
 
+## Installation 💿
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/descope-sample-apps/dotnet-maui-sample-app.git
+cd dotnet-maui-sample-app
+```
+
+2. Restore NuGet packages:
+
+```bash
+dotnet restore
+```
+
+## Running the Application 🚀
+
+
+
+
 ## Issue Reporting ⚠️
 
 This project is a simple demonstration of integrating Descope into a .NET MAUI application. For any issues or suggestions, feel free to open an issue in the GitHub repository.
