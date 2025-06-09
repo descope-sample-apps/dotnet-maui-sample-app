@@ -1,4 +1,4 @@
-<img width="734" alt="dotnetmauilogo" src="https://github.com/user-attachments/assets/51654efe-d874-4ab6-a32f-53a77ad4f083" />![.NET MAUI Sample App header](assets/dotnetmauilogo.png)
+<img width="1400" alt="dotnetmauilogo" src="https://github.com/user-attachments/assets/51654efe-d874-4ab6-a32f-53a77ad4f083" />
 —
 
 This sample app is an open-source sample app, built with .NET MAUI. This app utilizes Descope and the Duende IdentityModel OidcClient library to perform a PKCE OAuth2/OIDC authentication flow.
