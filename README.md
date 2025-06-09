@@ -39,7 +39,7 @@ dotnet restore
 
 Fill in the **ProjectID** variable in **MauiProgram.cs** with your own Descope Project ID which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
 
-In the Descope Console, navigate to Project ➜ General ➜ Security ➜ Approved Domains, and add **callback** as an approved domain.
+In the Descope Console, navigate to [Project Settings](https://app.descope.com/settings/project) ➜ General ➜ Security ➜ Approved Domains, and add '**callback**' as an approved domain.
 
 ## Running the Application 🚀
 
