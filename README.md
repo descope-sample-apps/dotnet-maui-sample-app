@@ -34,8 +34,13 @@ cd dotnet-maui-sample-app
 ```powershell
 dotnet restore
 ```
+3. Install necessary workloads
 
-3. Setup environment variables:
+```powershell
+dotnet workload install maui
+```
+
+4. Setup environment variables:
 
 Fill in the **ProjectID** variable in **MauiProgram.cs** with your own Descope Project ID which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
 
@@ -47,10 +52,10 @@ To start the application, run:
 
 ```powershell
 # Android
-dotnet build -t:Run -f net8.0-android -p:Configuration=Debug
+dotnet run -f net8.0-android 
 
 # Windows
-dotnet build -t:Run -f net8.0-windows10.0.19041.0
+dotnet run -f net8.0-windows10.0.19041.0
 ```
 Once the app launches, tap Log In ➜ sign in with Descope ➜ you’ll be returned to the app with your user claims displayed. Tap Log Out to clear the session.
 
