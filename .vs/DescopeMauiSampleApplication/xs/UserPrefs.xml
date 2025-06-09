@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{B17E2388-F1B5-4CDE-9059-93DEF4DAF388}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DescopeMauiSampleApplication PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DescopeMauiSampleApplication/MauiProgram.cs">
+    <Files>
+      <File FileName="DescopeMauiSampleApplication/MainPage.xaml.cs" Line="5" Column="15" />
+      <File FileName="DescopeMauiSampleApplication/MainPage.xaml" Line="10" Column="30" />
+      <File FileName="DescopeMauiSampleApplication/Descope/DescopeClient.cs" Line="9" Column="17" />
+      <File FileName="DescopeMauiSampleApplication/Descope/DescopeClientConfiguration.cs" Line="4" Column="2" />
+      <File FileName="DescopeMauiSampleApplication/Descope/WebBrowserAuthentication.cs" Line="9" Column="10" />
+      <File FileName="DescopeMauiSampleApplication/MauiProgram.cs" Line="3" Column="36" />
+      <File FileName="DescopeMauiSampleApplication/Platforms/MacCatalyst/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DescopeMauiSampleApplication" expanded="True">
+            <Node name="DescopeMauiSampleApplication" expanded="True">
+              <Node name="Descope" expanded="True" />
+              <Node name="Platforms" expanded="True">
+                <Node name="MacCatalyst" expanded="True" />
+              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="MauiProgram.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
