@@ -35,10 +35,16 @@ cd dotnet-maui-sample-app
 dotnet restore
 ```
 
+3. Setup environment variables:
+
+Fill in the ```bash ProjectID``` **ProjectID** variable in **MauiProgram.cs** with your own Descope Project ID which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
+
+In the Descope Console, navigate to Project ➜ General ➜ Security ➜ Approved Domains, and add **callback** as an approved domain.
+
 ## Running the Application 🚀
 
 
-
+Once the app launches, tap Log In ➜ sign in with Descope ➜ you’ll be returned to the app with your user claims displayed. Tap Log Out to clear the session.
 
 ## Issue Reporting ⚠️
 
