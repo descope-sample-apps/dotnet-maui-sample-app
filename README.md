@@ -24,14 +24,14 @@ Look at the [Duende.IdentityModel.OidcClient](https://docs.duendesoftware.com/id
 
 1. Clone the repository:
 
-```bash
+```powershell
 git clone https://github.com/descope-sample-apps/dotnet-maui-sample-app.git
 cd dotnet-maui-sample-app
 ```
 
 2. Restore NuGet packages:
 
-```bash
+```powershell
 dotnet restore
 ```
 
@@ -45,7 +45,7 @@ In the Descope Console, navigate to [Project Settings](https://app.descope.com/s
 
 To start the application, run:
 
-```bash
+```powershell
 # Android
 dotnet build -t:Run -f net8.0-android -p:Configuration=Debug
 
