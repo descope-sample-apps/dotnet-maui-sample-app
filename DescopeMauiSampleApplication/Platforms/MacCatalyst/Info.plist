@@ -36,8 +36,24 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>myapp</string>
+				<string>msalP2y0ZxPeRELhp6pJWC40Rgqk3Mtd</string>
+				<string>http</string>
+				<string>localhost</string>
 			</array>
 		</dict>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost </key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

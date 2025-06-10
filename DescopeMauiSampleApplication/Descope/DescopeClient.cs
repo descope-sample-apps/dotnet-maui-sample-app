@@ -1,5 +1,6 @@
 ﻿using Duende.IdentityModel.Client;
 using Duende.IdentityModel.OidcClient;
+using Microsoft.Identity.Client;
 using Microsoft.Extensions.Logging;
 
 namespace DescopeMauiSampleApplication.Descope

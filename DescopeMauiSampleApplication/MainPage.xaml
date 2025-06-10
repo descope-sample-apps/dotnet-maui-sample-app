@@ -5,42 +5,39 @@
     x:Class="DescopeMauiSampleApplication.MainPage">
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="55"
             Padding="30,0"
             VerticalOptions="Center">
             <StackLayout x:Name="LoginView">
                 <Image
-                    Source="dotnet_bot.png"
-                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    Source="descope_logo.png"
+                    SemanticProperties.Description="Descope logo"
                     HeightRequest="200"
                     HorizontalOptions="Center" />
 
-                <Label
-                    Text="Hello, World!"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="32"
-                    HorizontalOptions="Center" />
+                <BoxView
+                    HeightRequest="30"
+                    Color="White" />
 
                 <Label
-                    Text="Welcome to .NET Multi-platform App UI"
+                    Text="Welcome to this .NET MAUI App with Descope OIDC Authentication"
                     SemanticProperties.HeadingLevel="Level2"
-                    SemanticProperties.Description="Welcome to dot net Multi-platform App UI"
-                    FontSize="18"
+                    SemanticProperties.Description="Welcome to dot net message "
+                    FontSize="28"
                     HorizontalOptions="Center" />
 
-                <Button
-                    x:Name="CounterBtn"
-                    Text="Click me"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Center"
-                    Margin="10"/>
+                <BoxView
+                    HeightRequest="40"
+                    Color="White" />
 
                 <Button
                     x:Name="LoginBtn"
                     Text="Log In"
+                    FontSize="25"
                     SemanticProperties.Hint="Click to log in"
                     Clicked="OnLoginClicked"
+                    WidthRequest="220"
+                    HeightRequest="60"
                     HorizontalOptions="Center" />
             </StackLayout>
 
@@ -50,7 +47,7 @@
 
                 <Label
                     x:Name="HelloLbl"
-                    Text="Hello, World!"
+                    Text="Session Informtion Dashboard"
                     SemanticProperties.HeadingLevel="Level5"
                     FontSize="25"
                     HorizontalOptions="Center" />

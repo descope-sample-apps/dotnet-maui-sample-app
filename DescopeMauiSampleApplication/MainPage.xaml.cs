@@ -1,73 +1,47 @@
 ﻿using System.Diagnostics;
 using Duende.IdentityModel.OidcClient;
 using DescopeMauiSampleApplication.Descope;
+using DescopeMauiSampleApplication.Services;
+using Microsoft.Identity.Client;
 
 namespace DescopeMauiSampleApplication;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
-    private DescopeClient _descopeClient;
-    private LoginResult _authenticationData;
 
-    public MainPage(DescopeClient descopeClient)
+    readonly AuthService _auth;
+    private AuthenticationResult? _session;
+
+
+    public MainPage(AuthService auth)  // DI provides it
     {
         InitializeComponent();
-        _descopeClient = descopeClient;
+        _auth = auth;
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    async void OnLoginClicked(object s, EventArgs e)
     {
-        count++;
-
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
-
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        _session = await _auth.SignInAsync(this.Window.Handler.PlatformView);
+        if (_session != null) ShowDashboard();
     }
 
-    public async void OnLoginClicked(object sender, EventArgs e)
+    async void OnLogoutClicked(object s, EventArgs e)
     {
-        Debug.WriteLine("Login button clicked");
-        var loginResult = await _descopeClient.LoginAsync();
-
-        if (loginResult.IsError)
-        {
-            await DisplayAlert("OIDC error", loginResult.Error ?? "unknown", "OK");
-            return;
-        }
-
-        if (!loginResult.IsError)
-        {
-            _authenticationData = loginResult;
-            LoginView.IsVisible = false;
-            HomeView.IsVisible = true;
-
-            UserInfoLvw.ItemsSource = loginResult.User.Claims;
-            HelloLbl.Text = $"Hello, {loginResult.User.Claims.FirstOrDefault(x => x.Type == "name")?.Value}";
-        }
-        else
-        {
-            await DisplayAlert("Error", loginResult.ErrorDescription, "OK");
-        }
+        await _auth.SignOutAsync();
+        ShowLogin();
     }
 
-    public async void OnLogoutClicked(object sender, EventArgs e)
+    private void ShowLogin()
     {
-        var logoutResult = await _descopeClient.LogoutAsync(_authenticationData.IdentityToken);
-
-        if (!logoutResult.IsError)
-        {
-            _authenticationData = null;
-            LoginView.IsVisible = true;
-            HomeView.IsVisible = false;
-        }
-        else
-        {
-            await DisplayAlert("Error", logoutResult.ErrorDescription, "OK");
-        }
+        LoginView.IsVisible = true;
+        HomeView.IsVisible = false;
     }
+
+    private void ShowDashboard()
+    {
+        LoginView.IsVisible = false;
+        HomeView.IsVisible = true;
+    }
+
 }
 
