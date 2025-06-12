@@ -46,8 +46,8 @@
                 IsVisible="false">
 
                 <Label
-                    x:Name="HelloLbl"
-                    Text="Session Informtion Dashboard"
+                    x:Name="InfoLbl"
+                    Text="Session Information Dashboard"
                     SemanticProperties.HeadingLevel="Level5"
                     FontSize="25"
                     HorizontalOptions="Center" />

@@ -38,7 +38,7 @@
       </uap:VisualElements>
       <Extensions>
         <uap:Extension Category="windows.protocol">
-        <uap:Protocol Name="msalP2y0ZxPeRELhp6pJWC40Rgqk3Mtd">
+        <uap:Protocol Name="msal1234">
             <uap:DisplayName>DescopeMauiSampleApplication</uap:DisplayName>
         </uap:Protocol>
         </uap:Extension>
