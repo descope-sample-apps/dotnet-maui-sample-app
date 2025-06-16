@@ -11,6 +11,7 @@ public partial class MainPage : ContentPage
 
     readonly AuthService _auth;
     private AuthenticationResult? _session;
+    List<System.Security.Claims.Claim> claims = new List<System.Security.Claims.Claim>();
 
 
     public MainPage(AuthService auth)  // DI provides it
@@ -21,13 +22,18 @@ public partial class MainPage : ContentPage
 
     async void OnLoginClicked(object s, EventArgs e)
     {
+        Debug.WriteLine("OnLoginClicked called");
+        Console.WriteLine("OnLoginClicked called");
         _session = await _auth.SignInAsync(this.Window.Handler.PlatformView);
+        Debug.WriteLine($"Session is: {_session}");
         if (_session != null) ShowDashboard(_session);
     }
 
     async void OnLogoutClicked(object s, EventArgs e)
     {
-        await _auth.SignOutAsync();
+        await _auth.SignOutLocalAsync();
+        claims.Clear();
+        await _auth.SignOutRemoteAsync(_session.IdToken);
         ShowLogin();
     }
 
@@ -42,73 +48,22 @@ public partial class MainPage : ContentPage
         LoginView.IsVisible = false;
         HomeView.IsVisible = true;
 
-        String name = "";
-
-        List<System.Security.Claims.Claim> claims = new List<System.Security.Claims.Claim>();
+        String user_full_name = result.Account.Username;
 
         if (result.ClaimsPrincipal != null)
         {
             foreach (var claim in result.ClaimsPrincipal.Claims)
             {
                 if (claim.Type == "name")
-                    name = claim.Value;
+                    user_full_name = claim.Value;
                 claims.Add(claim);
             }
         }
 
+        Debug.WriteLine(claims.Count);
+
         UserInfoLvw.ItemsSource = claims;
-        InfoLbl.Text = $"Welcome, {name}! Thanks for using Descope!";
-
-        //var claims2 = DecodeJwt(result.IdToken);
-
-        //UserInfoLvw.ClearLogicalChildren();
-
-        //foreach (var kvp in claims2)
-        //{
-        //    UserInfoLvw.AddLogicalChild(new Label
-        //    {
-        //        Text = $"{kvp.Key}: {kvp.Value}",
-        //        FontSize = 16,
-        //        //Margin = new Thickness(5)
-        //    });
-        //}
-
-
-
+        InfoLbl.Text = $"Welcome, {user_full_name}! Thanks for using Descope!";
     }
-
-    private Dictionary<string, object>? DecodeJwt(string jwt)
-    {
-        try
-        {
-            var parts = jwt.Split('.');
-            if (parts.Length != 3)
-                return null;
-
-            var payload = parts[1];
-            var json = DecodeBase64(payload);
-            return System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(json);
-        }
-        catch
-        {
-            return null;
-        }
-    }
-
-    private string DecodeBase64(string base64)
-    {
-        base64 = base64.Replace('-', '+').Replace('_', '/');
-        switch (base64.Length % 4)
-        {
-            case 2: base64 += "=="; break;
-            case 3: base64 += "="; break;
-            case 0: break;
-            default: base64 += "="; break;
-        }
-
-        var bytes = Convert.FromBase64String(base64);
-        return System.Text.Encoding.UTF8.GetString(bytes);
-    }
-
 }
 

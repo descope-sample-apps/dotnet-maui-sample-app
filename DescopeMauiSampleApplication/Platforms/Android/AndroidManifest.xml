@@ -4,12 +4,12 @@
         android:allowBackup="true"
         
         android:supportsRtl="true">
-        <activity android:name="microsoft.identity.client.BrowserTabActivity" android:exported="true">
+        <activity android:name="microsoft.identity.client.BrowserTabActivity" android:exported="true" android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="msalP2y0ZxPeRELhp6pJWC40Rgqk3Mtd" android:host="auth" />
+                <data android:scheme="msalp2y0zxperelhp6pjwc40rgqk3mtd" android:host="auth" />
             </intent-filter>
         </activity>
     </application>
