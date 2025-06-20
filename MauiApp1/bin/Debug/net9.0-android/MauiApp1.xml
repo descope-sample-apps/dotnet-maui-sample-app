@@ -4,11 +4,6 @@
         <name>MauiApp1</name>
     </assembly>
     <members>
-        <member name="T:MauiApp1.Services.Pkce">
-            <summary>
-            Provides a randomly generating PKCE code verifier and it's corresponding code challenge.
-            </summary>
-        </member>
         <member name="T:MauiApp1.Resource">
             <summary>
             Android Resource Designer class.

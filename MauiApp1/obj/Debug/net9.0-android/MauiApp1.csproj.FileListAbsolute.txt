@@ -949,3 +949,9 @@
 /Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/assets/arm64-v8a/Microsoft.IdentityModel.Abstractions.dll
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/assets/arm64-v8a/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/assets/arm64-v8a/Microsoft.IdentityModel.Logging.dll
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/assets/arm64-v8a/Microsoft.IdentityModel.Tokens.dll
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/assets/arm64-v8a/System.IdentityModel.Tokens.Jwt.dll
+/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/Debug/net9.0-android/android/src/crc64e2862aff4a97f0b0/WebAuthenticatorCallbackActivity.java

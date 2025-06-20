@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BaRq8ZqRjoc=",
+  "dgSpecHash": "sx+7SFwn0MM=",
   "success": true,
   "projectFilePath": "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/MauiApp1.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,10 @@
     "/Users/michaelrimboim/.nuget/packages/microsoft.extensions.logging.debug/9.0.0/microsoft.extensions.logging.debug.9.0.0.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.extensions.options/9.0.0/microsoft.extensions.options.9.0.0.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.extensions.primitives/9.0.0/microsoft.extensions.primitives.9.0.0.nupkg.sha512",
+    "/Users/michaelrimboim/.nuget/packages/microsoft.identitymodel.abstractions/8.12.1/microsoft.identitymodel.abstractions.8.12.1.nupkg.sha512",
+    "/Users/michaelrimboim/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.12.1/microsoft.identitymodel.jsonwebtokens.8.12.1.nupkg.sha512",
+    "/Users/michaelrimboim/.nuget/packages/microsoft.identitymodel.logging/8.12.1/microsoft.identitymodel.logging.8.12.1.nupkg.sha512",
+    "/Users/michaelrimboim/.nuget/packages/microsoft.identitymodel.tokens/8.12.1/microsoft.identitymodel.tokens.8.12.1.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.maui.controls/9.0.51/microsoft.maui.controls.9.0.51.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.maui.controls.build.tasks/9.0.51/microsoft.maui.controls.build.tasks.9.0.51.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.maui.controls.core/9.0.51/microsoft.maui.controls.core.9.0.51.nupkg.sha512",
@@ -23,6 +27,7 @@
     "/Users/michaelrimboim/.nuget/packages/microsoft.maui.graphics/9.0.51/microsoft.maui.graphics.9.0.51.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.maui.resizetizer/9.0.51/microsoft.maui.resizetizer.9.0.51.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/microsoft.net.illink.tasks/9.0.6/microsoft.net.illink.tasks.9.0.6.nupkg.sha512",
+    "/Users/michaelrimboim/.nuget/packages/system.identitymodel.tokens.jwt/8.12.1/system.identitymodel.tokens.jwt.8.12.1.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/xamarin.android.glide/4.16.0.11/xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/xamarin.android.glide.annotations/4.16.0.11/xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "/Users/michaelrimboim/.nuget/packages/xamarin.android.glide.disklrucache/4.16.0.11/xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",

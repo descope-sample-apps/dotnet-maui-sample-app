@@ -29,9 +29,15 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:host="oauth" />
-        <data android:pathPrefix="/callback" />
         <data android:scheme="mauiapp" />
+      </intent-filter>
+    </activity>
+    <activity android:name="crc64e2862aff4a97f0b0.WebAuthenticatorCallbackActivity" android:exported="true" android:launchMode="singleTop" android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="msalp2y0zxperelhp6pjwc40rgqk3mtd" />
       </intent-filter>
     </activity>
     <activity android:name="crc6468b6408a11370c2f.WebAuthenticatorIntermediateActivity" android:configChanges="orientation|screenSize" android:exported="false" />
