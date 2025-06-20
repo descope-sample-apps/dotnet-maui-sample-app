@@ -1,9 +1,7 @@
 <img width="1400" alt="dotnetmauilogo" src="https://github.com/user-attachments/assets/51654efe-d874-4ab6-a32f-53a77ad4f083" />
 —
 
-This sample app is an open-source sample app, built with .NET MAUI. This app utilizes Descope and the Duende IdentityModel OidcClient library to perform a PKCE OAuth2/OIDC authentication flow.
-
-Look at the [Duende.IdentityModel.OidcClient](https://docs.duendesoftware.com/identitymodel-oidcclient/) to learn more.
+This sample app is an open-source sample app, built with .NET MAUI. This app utilizes Descope to perform a PKCE OAuth2/OIDC authentication flow.
 
 ## Table of Contents 📝
 
@@ -44,7 +42,7 @@ dotnet workload install maui
 
 Fill in the **ProjectID** variable in **MauiProgram.cs** with your own Descope Project ID which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
 
-In the Descope Console, navigate to [Project Settings](https://app.descope.com/settings/project) ➜ General ➜ Security ➜ Approved Domains, and add '**callback**' as an approved domain.
+In the Descope Console, navigate to [Project Settings](https://app.descope.com/settings/project) ➜ General ➜ Security ➜ Approved Domains, and add approved domains according to your deeplinking scheme.
 
 ## Running the Application 🚀
 
@@ -52,10 +50,7 @@ To start the application, run:
 
 ```powershell
 # Android
-dotnet run -f net8.0-android 
-
-# Windows
-dotnet run -f net8.0-windows10.0.19041.0
+dotnet build -t:Run -f net9.0-android
 ```
 Once the app launches, tap Log In ➜ sign in with Descope ➜ you’ll be returned to the app with your user claims displayed. Tap Log Out to clear the session.
 
