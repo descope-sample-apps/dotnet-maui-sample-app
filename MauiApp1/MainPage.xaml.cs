@@ -116,6 +116,9 @@ public partial class MainPage : ContentPage
 		LoginView.IsVisible = false;
 		HomeView.IsVisible = true;
 
+		// Display the raw token
+		AccessTokenLabel.Text = accessToken;
+
 		// Parse the JWT
 		var handler = new JwtSecurityTokenHandler();
 		var jwtToken = handler.ReadJwtToken(accessToken);
