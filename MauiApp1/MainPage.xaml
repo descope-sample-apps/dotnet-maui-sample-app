@@ -29,6 +29,17 @@
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level3" />
 
+            <Button x:Name="OidcAuthBtn"
+                    Text="Start OIDC Authentication"
+                    SemanticProperties.Hint="Starts the OIDC authentication flow with PKCE"
+                    Clicked="OnOidcAuthClicked"
+                    HorizontalOptions="Fill" />
+
+            <Label x:Name="AuthResultLabel"
+                   Text="Authentication result will appear here."
+                   Style="{StaticResource SubHeadline}"
+                   SemanticProperties.HeadingLevel="Level3" />
+
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
