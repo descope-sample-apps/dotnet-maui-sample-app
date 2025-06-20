@@ -40,7 +40,8 @@ dotnet workload install maui
 
 4. Setup environment variables:
 
-Fill in the **ProjectID** variable in **MauiProgram.cs** with your own Descope Project ID which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
+Fill in the **clientID** and **redirectUri** variables in **MainPage.xaml.cs** with your own Descope Project ID and custom redirect scheme. The **clientId** is the Descope Project ID, which can be found under [Project Settings](https://app.descope.com/settings/project), in the console.
+Fill in the **DataScheme** in **WebAuthenticatorCallbackActivity.cs**.
 
 In the Descope Console, navigate to [Project Settings](https://app.descope.com/settings/project) ➜ General ➜ Security ➜ Approved Domains, and add approved domains according to your deeplinking scheme.
 
