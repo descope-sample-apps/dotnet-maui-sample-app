@@ -2,6 +2,7 @@
 
 public partial class App : Application
 {
+	public static string? DeepLinkUrl { get; set; }
 	public App()
 	{
 		InitializeComponent();

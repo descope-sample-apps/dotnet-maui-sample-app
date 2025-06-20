@@ -24,6 +24,11 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
+            <Label x:Name="DeepLinkUrlLabel"
+                   Text="No deep link opened."
+                   Style="{StaticResource SubHeadline}"
+                   SemanticProperties.HeadingLevel="Level3" />
+
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
