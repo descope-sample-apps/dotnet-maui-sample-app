@@ -1,29 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/MauiApp1.csproj": {}
+    "C:\\Users\\Descope\\source\\repos\\maui-oidc-working\\MauiApp1\\MauiApp1.csproj": {}
   },
   "projects": {
-    "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/MauiApp1.csproj": {
+    "C:\\Users\\Descope\\source\\repos\\maui-oidc-working\\MauiApp1\\MauiApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/MauiApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Descope\\source\\repos\\maui-oidc-working\\MauiApp1\\MauiApp1.csproj",
         "projectName": "MauiApp1",
-        "projectPath": "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/MauiApp1.csproj",
-        "packagesPath": "/Users/michaelrimboim/.nuget/packages/",
-        "outputPath": "/Users/michaelrimboim/Development/random/mauiandroidv2/MauiApp1/obj/",
+        "projectPath": "C:\\Users\\Descope\\source\\repos\\maui-oidc-working\\MauiApp1\\MauiApp1.csproj",
+        "packagesPath": "C:\\Users\\Descope\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Descope\\source\\repos\\maui-oidc-working\\MauiApp1\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/michaelrimboim/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Descope\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0-android",
           "net9.0-ios",
-          "net9.0-maccatalyst"
+          "net9.0-maccatalyst",
+          "net9.0-windows10.0.19041.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +44,10 @@
           },
           "net9.0-maccatalyst18.5": {
             "targetAlias": "net9.0-maccatalyst",
+            "projectReferences": {}
+          },
+          "net9.0-windows10.0.19041": {
+            "targetAlias": "net9.0-windows10.0.19041.0",
             "projectReferences": {}
           }
         },
@@ -94,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         },
         "net9.0-ios18.5": {
           "targetAlias": "net9.0-ios",
@@ -137,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         },
         "net9.0-maccatalyst18.5": {
           "targetAlias": "net9.0-maccatalyst",
@@ -181,7 +192,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        },
+        "net9.0-windows10.0.19041": {
+          "targetAlias": "net9.0-windows10.0.19041.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Maui.Controls": {
+              "target": "Package",
+              "version": "[9.0.51, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.12.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.19041.57, 10.0.19041.57]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref.Windows": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -191,10 +245,13 @@
         "android-x64": {
           "#import": []
         },
-        "iossimulator-arm64": {
+        "iossimulator-x64": {
           "#import": []
         },
-        "maccatalyst-arm64": {
+        "maccatalyst-x64": {
+          "#import": []
+        },
+        "win10-x64": {
           "#import": []
         }
       }

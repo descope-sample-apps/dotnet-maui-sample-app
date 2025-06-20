@@ -4,6 +4,66 @@
         <name>MauiApp1</name>
     </assembly>
     <members>
+        <member name="M:MauiApp1.MainPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MauiApp1.MainPage"/> class.
+            </summary>
+        </member>
+        <member name="M:MauiApp1.MainPage.OnAppearing">
+            <summary>
+            Called when the page is about to appear. Handles any initial deep-link display logic.
+            </summary>
+        </member>
+        <member name="M:MauiApp1.MainPage.OnOidcAuthClicked(System.Object,System.EventArgs)">
+            <summary>
+            Starts the OIDC authentication flow when the associated UI element is clicked.
+            </summary>
+        </member>
+        <member name="M:MauiApp1.MainPage.OnLogOutClicked(System.Object,System.EventArgs)">
+            <summary>
+            Handles the logout process: resets the UI, logs out remotely from Descope, and clears local tokens.
+            </summary>
+        </member>
+        <member name="M:MauiApp1.MainPage.ExchangeCodeForTokenAsync(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Exchanges the authorization code for access and ID tokens at the specified token endpoint.
+            </summary>
+            <param name="tokenEndpoint">The token endpoint URL.</param>
+            <param name="clientId">The Descope project (client) ID.</param>
+            <param name="redirectUri">The redirect URI registered with the OIDC provider.</param>
+            <param name="code">The authorization code returned from the authentication step.</param>
+            <param name="codeVerifier">The PKCE code verifier generated earlier.</param>
+            <returns>A comma-separated string containing the access token and ID token, or null if the exchange fails.</returns>
+        </member>
+        <member name="M:MauiApp1.MainPage.ShowDashboard(System.String)">
+            <summary>
+            Displays the dashboard by parsing the JWT access token, storing it, and binding user claims to the UI.
+            </summary>
+            <param name="accessToken">The raw JWT access token.</param>
+        </member>
+        <member name="M:MauiApp1.MainPage.OnCopyTokenClicked(System.Object,System.EventArgs)">
+            <summary>
+            Copies the stored access token to the clipboard and temporarily updates the button text.
+            </summary>
+        </member>
+        <member name="M:MauiApp1.MainPage.GeneratePkce(System.Int32)">
+            <summary>
+            Generates a PKCE code challenge and verifier pair.
+            </summary>
+            <param name="size">The byte length of the random verifier. Defaults to 32 bytes.</param>
+            <returns>
+            A tuple containing:
+            <c>code_challenge</c> – the Base64 URL-encoded SHA256 hash of the verifier,  
+            <c>verifier</c> – the random Base64 URL-encoded string.
+            </returns>
+        </member>
+        <member name="M:MauiApp1.MainPage.Base64UrlEncode(System.Byte[])">
+            <summary>
+            Encodes the given byte array into a Base64 URL-safe string by replacing '+' and '/' characters and trimming padding.
+            </summary>
+            <param name="data">The byte array to encode.</param>
+            <returns>A Base64 URL-encoded string suitable for use in URLs.</returns>
+        </member>
         <member name="T:MauiApp1.Resource">
             <summary>
             Android Resource Designer class.

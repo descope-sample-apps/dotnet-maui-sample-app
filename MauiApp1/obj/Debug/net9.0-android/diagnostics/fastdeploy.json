@@ -2,16 +2,16 @@
   "Task": "FastDeploy",
   "Properties": {
     "target.prop.ro.product.build.version.sdk": "35",
-    "target.prop.ro.product.cpu.abilist": "arm64-v8a",
+    "target.prop.ro.product.cpu.abilist": "x86_64;arm64-v8a",
     "target.prop.ro.product.manufacturer": "Google",
-    "target.prop.ro.product.model": "sdk_gphone64_arm64",
-    "target.prop.ro.product.cpu.abi": "arm64-v8a",
+    "target.prop.ro.product.model": "sdk_gphone64_x86_64",
+    "target.prop.ro.product.cpu.abi": "x86_64",
     "deploy.error.code": "",
     "deploy.tool": "xamarin.sync",
     "deploy.result": "Success",
     "deploy.supports.fastdev": "True",
     "deploy.systemapp": "False",
-    "deploy.duration.ms": "645",
+    "deploy.duration.ms": "569",
     "pii.deploy.error": "",
     "pii.deploy.file": ""
   }

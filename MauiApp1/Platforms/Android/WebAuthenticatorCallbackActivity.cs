@@ -8,7 +8,7 @@ namespace MauiApp1.Platforms.Android
     [Activity(NoHistory = true, LaunchMode = LaunchMode.SingleTop, Exported = true)]
     [IntentFilter(new[] { Intent.ActionView },
                   Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = "msalp2y0zxperelhp6pjwc40rgqk3mtd")]
+                  DataScheme = "<YOUR_DATA_SCHEME>")] //TODO: Replace with your actual data scheme, e.g., "myapp"
     public class WebAuthenticatorCallbackActivity : Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity
     {
     }
