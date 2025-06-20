@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DescopeMauiSampleApplication.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="55"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <StackLayout x:Name="LoginView">
+                <Image
+                    Source="descope_logo.png"
+                    SemanticProperties.Description="Descope logo"
+                    HeightRequest="200"
+                    HorizontalOptions="Center" />
+
+                <BoxView
+                    HeightRequest="30"
+                    Color="White" />
+
+                <Label
+                    Text="Welcome to this .NET MAUI App with Descope OIDC Authentication"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Welcome to dot net message "
+                    FontSize="28"
+                    HorizontalOptions="Center" />
+
+                <BoxView
+                    HeightRequest="40"
+                    Color="White" />
+
+                <Button
+                    x:Name="LoginBtn"
+                    Text="Log In"
+                    FontSize="25"
+                    SemanticProperties.Hint="Click to log in"
+                    Clicked="OnLoginClicked"
+                    WidthRequest="220"
+                    HeightRequest="60"
+                    HorizontalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout
+                x:Name="HomeView"
+                IsVisible="false">
+
+                <Label
+                    x:Name="InfoLbl"
+                    Text="Session Information Dashboard"
+                    SemanticProperties.HeadingLevel="Level5"
+                    FontSize="25"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="LogoutBtn"
+                    Text="Log Out"
+                    SemanticProperties.Hint="Click to log out"
+                    Clicked="OnLogoutClicked"
+                    HorizontalOptions="Center"
+                    Margin="0,30"/>
+
+                <ListView x:Name="UserInfoLvw">
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid HeightRequest="50">
+                                <Label LineBreakMode="NoWrap"
+                                       Margin="10,0,0,0" Text="Claims" FontAttributes="Bold"
+                                       FontSize="18" TextColor="Black" HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                </ListView>
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
