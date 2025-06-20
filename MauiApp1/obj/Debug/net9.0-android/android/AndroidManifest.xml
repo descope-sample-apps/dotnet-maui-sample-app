@@ -12,24 +12,10 @@
   <permission android:name="com.companyname.mauiapp1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.mauiapp1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="crc64e632a077a20c694c.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="MauiApp1" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
-    <activity android:name="com.microsoft.maui.essentials.WebAuthenticatorCallbackActivity" android:exported="true">
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="mauiapp" />
-      </intent-filter>
-    </activity>
-    <activity android:name="crc64e632a077a20c694c.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:theme="@style/Maui.SplashTheme">
+    <activity android:name="crc64e632a077a20c694c.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:theme="@style/Maui.SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="mauiapp" />
       </intent-filter>
     </activity>
     <activity android:name="crc64e2862aff4a97f0b0.WebAuthenticatorCallbackActivity" android:exported="true" android:launchMode="singleTop" android:noHistory="true">
