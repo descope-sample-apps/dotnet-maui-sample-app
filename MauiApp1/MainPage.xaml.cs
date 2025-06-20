@@ -4,11 +4,14 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using Microsoft.Maui.Controls;
 
 namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
+	private string? _accessToken;
+
 	public MainPage()
 	{
 		InitializeComponent();
@@ -116,7 +119,8 @@ public partial class MainPage : ContentPage
 		LoginView.IsVisible = false;
 		HomeView.IsVisible = true;
 
-		// Display the raw token
+		// Store and Display the raw token
+		_accessToken = accessToken;
 		AccessTokenLabel.Text = accessToken;
 
 		// Parse the JWT
@@ -132,6 +136,17 @@ public partial class MainPage : ContentPage
 		// Bind UI
 		UserInfoLvw.ItemsSource = claims;
 		InfoLbl.Text = $"Welcome, {userFullName}!";
+	}
+
+	async void OnCopyTokenClicked(object sender, EventArgs e)
+	{
+		if (!string.IsNullOrEmpty(_accessToken))
+		{
+			await Clipboard.Default.SetTextAsync(_accessToken);
+			CopyTokenBtn.Text = "Copied!";
+			await Task.Delay(2000);
+			CopyTokenBtn.Text = "Copy Token";
+		}
 	}
 
 	// PKCE Helper methods
