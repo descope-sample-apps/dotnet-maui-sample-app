@@ -1,7 +1,9 @@
 <img width="1400" alt="dotnetmauilogo" src="https://github.com/user-attachments/assets/51654efe-d874-4ab6-a32f-53a77ad4f083" />
-—
 
-This sample app is an open-source sample app, built with .NET MAUI. This app utilizes Descope to perform a PKCE OAuth2/OIDC authentication flow.
+
+This sample app is an open-source sample app, built with .NET MAUI. This app utilizes Descope to perform a PKCE OAuth2/OIDC authentication flow to add auth to Android applications.
+
+> Note: A WindowsUI example is coming soon.
 
 ## Table of Contents 📝
 
