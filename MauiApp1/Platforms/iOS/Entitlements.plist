@@ -5,7 +5,7 @@
 	<!-- SecureStorage, where Descope.Maui keeps the session, needs a keychain access group on the iOS simulator -->
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.companyname.mauiapp1</string>
+		<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
 	</array>
 </dict>
 </plist>

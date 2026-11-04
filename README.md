@@ -41,7 +41,7 @@ dotnet workload install maui
 
 4. Configure your Descope project:
 
-In **MauiProgram.cs**, replace `<YOUR_DESCOPE_PROJECT_ID>` with your Descope Project ID, which can be found under [Project Settings](https://app.descope.com/settings/project) in the console. The sample uses the redirect URI `descopemaui://auth`. If you change its scheme, also change the **DataScheme** in **Platforms/Android/WebAuthenticatorCallbackActivity.cs**.
+In **MauiProgram.cs**, replace `<YOUR_DESCOPE_PROJECT_ID>` with your Descope Project ID, which can be found under [Project Settings](https://app.descope.com/settings/project) in the console. The sample uses the redirect URI `descopemaui://auth`. If you change its scheme, also change the **DataScheme** in **Platforms/Android/WebAuthenticatorCallbackActivity.cs** and the **CFBundleURLSchemes** entry in **Platforms/iOS/Info.plist**.
 
 If your project has [Approved Domains](https://app.descope.com/settings/project) set, add the exact redirect URI (`descopemaui://auth`), since wildcards don't work for it. If **Apply Trusted Domains on Flow Execution** is on, also add `api.descope.com` (or your custom domain).
 

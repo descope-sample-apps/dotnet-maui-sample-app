@@ -25,10 +25,19 @@ public partial class MainPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        var session = await _descope.SessionManager.LoadSessionAsync();
-        if (session != null)
+        try
         {
-            ShowDashboard(session);
+            var session = await _descope.SessionManager.LoadSessionAsync();
+            if (session != null)
+            {
+                ShowDashboard(session);
+            }
+        }
+        catch (Exception ex)
+        {
+            // the saved session couldn't be read, such as after a keychain error, so the user signs in again
+            Debug.WriteLine("Session restore error: " + ex);
+            ShowLogin();
         }
     }
 
